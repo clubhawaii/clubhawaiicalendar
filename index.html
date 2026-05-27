@@ -50,14 +50,13 @@
     --sat: #2E7CC0;
     
     /* 카테고리 (파스텔 배경 + 진한 보더) */
-    --c-han-bg: #E6F5D7;       --c-han: #5E9B36;
-    --c-pro-bg: #ECE3F4;       --c-pro: #7B57B0;
-    --c-event-bg: #FFE9CB;     --c-event: #C97A14;
-    --c-back-bg: #DDEEFB;      --c-back: #2E7CC0;
-    --c-grade-bg: #FBF1C8;     --c-grade: #A8810D;
-    --c-yoomini-bg: #FAD5E0;   --c-yoomini: #B72C5A;
-    --c-notice-bg: #DEF0F5;    --c-notice: #4E97AE;
-    --c-off: #0E0E0C;
+   --c-han-bg: #E6F5D7;       --c-han: #5E9B36;
+--c-pro-bg: #ECE3F4;       --c-pro: #7B57B0;
+--c-event-bg: #FFE9CB;     --c-event: #C97A14;
+--c-back-bg: #DDEEFB;      --c-back: #2E7CC0;
+--c-grade-bg: #FBF1C8;     --c-grade: #A8810D;
+--c-ch-bg: #FBE2E2;        --c-ch: #C0392B;
+--c-off: #0E0E0C;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -487,13 +486,12 @@
     color: var(--soft);
     margin-top: 2px;
   }
-  .item.han      { background: var(--c-han-bg);     border-left-color: var(--c-han); }
-  .item.pro      { background: var(--c-pro-bg);     border-left-color: var(--c-pro); }
-  .item.event    { background: var(--c-event-bg);   border-left-color: var(--c-event); }
-  .item.back     { background: var(--c-back-bg);    border-left-color: var(--c-back); }
-  .item.grade    { background: var(--c-grade-bg);   border-left-color: var(--c-grade); }
-  .item.yoomini  { background: var(--c-yoomini-bg); border-left-color: var(--c-yoomini); }
-  .item.notice   { background: var(--c-notice-bg);  border-left-color: var(--c-notice); }
+ .item.han      { background: var(--c-han-bg);     border-left-color: var(--c-han); }
+.item.pro      { background: var(--c-pro-bg);     border-left-color: var(--c-pro); }
+.item.event    { background: var(--c-event-bg);   border-left-color: var(--c-event); }
+.item.back     { background: var(--c-back-bg);    border-left-color: var(--c-back); }
+.item.grade    { background: var(--c-grade-bg);   border-left-color: var(--c-grade); }
+.item.ch       { background: var(--c-ch-bg);      border-left-color: var(--c-ch); }
 
   /* OFF */
   .cell.off-day {
@@ -644,10 +642,8 @@
   .modal-cat-pill.back .pill-dot { background: var(--c-back); }
   .modal-cat-pill.grade    { background: var(--c-grade-bg);   color: var(--c-grade); }
   .modal-cat-pill.grade .pill-dot { background: var(--c-grade); }
-  .modal-cat-pill.yoomini  { background: var(--c-yoomini-bg); color: var(--c-yoomini); }
-  .modal-cat-pill.yoomini .pill-dot { background: var(--c-yoomini); }
-  .modal-cat-pill.notice   { background: var(--c-notice-bg);  color: var(--c-notice); }
-  .modal-cat-pill.notice .pill-dot { background: var(--c-notice); }
+.modal-cat-pill.ch        { background: var(--c-ch-bg);     color: var(--c-ch); }
+.modal-cat-pill.ch .pill-dot { background: var(--c-ch); }
 
   .modal-title {
     font-family: 'Pretendard', sans-serif;
@@ -949,7 +945,7 @@
         <li class="nav-item" data-category="event"><span class="dot" style="background:var(--c-event)"></span>이벤트</li>
         <li class="nav-item" data-category="back"><span class="dot" style="background:var(--c-back)"></span>다시,발견</li>
         <li class="nav-item" data-category="grade"><span class="dot" style="background:var(--c-grade)"></span>우리 학년 집중</li>
-        <li class="nav-item" data-category="ch"><span class="dot" style="background:var(--c-yoomini)"></span>한솥밥 챌린지</li>
+        <li class="nav-item" data-category="ch"><span class="dot" style="background:var(--c-ch)"></span>한솥밥 챌린지</li>
       </ul>
     </div>
 
@@ -1036,11 +1032,10 @@ const CATEGORY_LABELS = {
   event: '이벤트',
   back: '다시,발견',
   grade: '우리 학년 집중',
-  yoomini: '유미니',
-  notice: '공지',
+  ch: '한솥밥 챌린지',
   off: 'OFF'
 };
-
+  
 const today = new Date();
 const todayY = today.getFullYear();
 const todayM = today.getMonth();
