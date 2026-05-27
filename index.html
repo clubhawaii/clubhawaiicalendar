@@ -279,6 +279,22 @@
     letter-spacing: -0.02em;
     color: var(--surface-3);
   }
+    .brand-watermark {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: 1;
+    letter-spacing: 0.04em;
+    color: var(--surface-3);
+    opacity: 0.6;
+    margin-left: auto;
+    padding-bottom: 4px;
+    white-space: nowrap;
+    user-select: none;
+  }
+  @media (max-width: 1100px) {
+    .brand-watermark { display: none; }
+  }
   .serif-copy {
     font-family: 'Instrument Serif', serif;
     font-style: italic;
@@ -966,9 +982,10 @@
 
     <section class="page-head">
       <div class="title-area">
-        <div class="month-row">
+      <div class="month-row">
           <h1 class="month-ko" id="month-ko">—</h1>
           <span class="month-en" id="month-en">—</span>
+          <span class="brand-watermark">CLUB HAWAII</span>
         </div>
         <div class="serif-copy" id="serif-copy">—</div>
         <div class="tag-line" id="tag-line">—</div>
