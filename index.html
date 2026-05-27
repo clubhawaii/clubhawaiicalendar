@@ -350,16 +350,15 @@ user-select: none;
   .nav-icon-btn:hover:not(:disabled) { background: var(--surface-2); }
   .nav-icon-btn:disabled { color: var(--mute); cursor: not-allowed; }
   .nav-current {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Pretendard', sans-serif;
     font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 0.08em;
+    font-size: 15px;
+    letter-spacing: -0.01em;
     color: var(--ink);
-    padding: 0 10px;
-    min-width: 86px;
+    padding: 0 14px;
+    min-width: 110px;
     text-align: center;
   }
-
   .state-banner {
     background: var(--surface);
     border: 1px solid var(--line);
@@ -1119,7 +1118,7 @@ function render() {
   const meta = (DATA.month_meta || []).find(r => r.month === monthKey);
   document.getElementById('serif-copy').textContent = meta ? (meta.serif_copy || '') : '';
   document.getElementById('tag-line').textContent   = meta ? (meta.tag_line || '') : '';
-  document.getElementById('nav-current').textContent = `${MONTHS_EN[viewM].slice(0,3)} ${viewY}`;
+document.getElementById('nav-current').textContent = `${viewM+1}월 ${viewY}`;
 
   const prevBtn = document.getElementById('prev-btn');
   const nextBtn = document.getElementById('next-btn');
